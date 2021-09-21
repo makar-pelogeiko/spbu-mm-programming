@@ -1,0 +1,20 @@
+﻿<Window x:Class="Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf"
+        mc:Ignorable="d"
+        Title="Curves" Height="550" Width="800" x:Name="Curves" ResizeMode="CanMinimize">
+	<Grid>
+        <Button x:Name="buttonStart" Content="Draw" HorizontalAlignment="Left" Margin="49,155,0,0" VerticalAlignment="Top" Width="75" Click="buttonStart_Click"/>
+		<Button x:Name="buttonPlus" Content="+ 0.1" HorizontalAlignment="Left" Margin="12,222,0,0" VerticalAlignment="Top" Width="75"
+				Command="{Binding Path=PlusSizeCommand}"/>
+        <Button x:Name="buttonMinus" Content="- 0.1" HorizontalAlignment="Left" Margin="109,222,0,0" VerticalAlignment="Top" Width="75"
+				Command="{Binding Path=MinusSizeCommand}"/>
+		<Label x:Name="labelSize" Content="{Binding Path=SizeStr}"  HorizontalAlignment="Left" Margin="64,277,0,0" VerticalAlignment="Top"/>
+		<ComboBox x:Name="comboBoxCurves" ItemsSource="{Binding Path=LstCombo}" SelectedItem="{Binding Path=SelectedObj}" HorizontalAlignment="Left" Margin="38,76,0,0" VerticalAlignment="Top" Width="120"/>
+		<Label x:Name="labelCruves" Content="Cruves" HorizontalAlignment="Left" Margin="38,28,0,0" VerticalAlignment="Top"/>
+		<Canvas x:Name="pictureBox"  HorizontalAlignment="Left" Height="400" Margin="290,50,0,0" VerticalAlignment="Top" Width="400"/>
+	</Grid>
+</Window>

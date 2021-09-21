@@ -1,2 +1,2 @@
-# spbu-mm-programming
-tasks saved from backup - origin repository is deleted now
+# spsu-mm-programming-first-course
+A supporting repository for SPSU Software Engineering bachelors
